@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CE2CAD8157E168D006F836C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE2CAD7157E168D006F836C /* UIKit.framework */; };
+		1CE2CADA157E168D006F836C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE2CAD9157E168D006F836C /* Foundation.framework */; };
+		1CE2CADC157E168D006F836C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE2CADB157E168D006F836C /* CoreGraphics.framework */; };
+		1CE2CAE2157E168D006F836C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CE2CAE0157E168D006F836C /* InfoPlist.strings */; };
+		1CE2CAE4157E168D006F836C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2CAE3157E168D006F836C /* main.m */; };
+		1CE2CAE8157E168D006F836C /* SQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2CAE7157E168D006F836C /* SQAppDelegate.m */; };
+		1CE2CAEB157E168D006F836C /* SQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2CAEA157E168D006F836C /* SQViewController.m */; };
+		1CE2CAFE157E19E6006F836C /* SQView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2CAFD157E19E6006F836C /* SQView.m */; };
+		1CE2CB02157E1F89006F836C /* SQLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2CB01157E1F89006F836C /* SQLayout.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CE2CAD3157E168D006F836C /* SQLayoutExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLayoutExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CE2CAD7157E168D006F836C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1CE2CAD9157E168D006F836C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1CE2CADB157E168D006F836C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1CE2CADF157E168D006F836C /* SQLayoutExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SQLayoutExample-Info.plist"; sourceTree = "<group>"; };
+		1CE2CAE1157E168D006F836C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CE2CAE3157E168D006F836C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CE2CAE5157E168D006F836C /* SQLayoutExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLayoutExample-Prefix.pch"; sourceTree = "<group>"; };
+		1CE2CAE6157E168D006F836C /* SQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQAppDelegate.h; sourceTree = "<group>"; };
+		1CE2CAE7157E168D006F836C /* SQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQAppDelegate.m; sourceTree = "<group>"; };
+		1CE2CAE9157E168D006F836C /* SQViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQViewController.h; sourceTree = "<group>"; };
+		1CE2CAEA157E168D006F836C /* SQViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQViewController.m; sourceTree = "<group>"; };
+		1CE2CAFC157E19E6006F836C /* SQView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQView.h; sourceTree = "<group>"; };
+		1CE2CAFD157E19E6006F836C /* SQView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQView.m; sourceTree = "<group>"; };
+		1CE2CB00157E1F89006F836C /* SQLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLayout.h; sourceTree = "<group>"; };
+		1CE2CB01157E1F89006F836C /* SQLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLayout.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CE2CAD0157E168D006F836C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE2CAD8157E168D006F836C /* UIKit.framework in Frameworks */,
+				1CE2CADA157E168D006F836C /* Foundation.framework in Frameworks */,
+				1CE2CADC157E168D006F836C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CE2CAC8157E168D006F836C = {
+			isa = PBXGroup;
+			children = (
+				1CE2CADD157E168D006F836C /* SQLayoutExample */,
+				1CE2CAD6157E168D006F836C /* Frameworks */,
+				1CE2CAD4157E168D006F836C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CE2CAD4157E168D006F836C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CE2CAD3157E168D006F836C /* SQLayoutExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CE2CAD6157E168D006F836C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CE2CAD7157E168D006F836C /* UIKit.framework */,
+				1CE2CAD9157E168D006F836C /* Foundation.framework */,
+				1CE2CADB157E168D006F836C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CE2CADD157E168D006F836C /* SQLayoutExample */ = {
+			isa = PBXGroup;
+			children = (
+				1CE2CAFF157E1F89006F836C /* SQLayout */,
+				1CE2CAE6157E168D006F836C /* SQAppDelegate.h */,
+				1CE2CAE7157E168D006F836C /* SQAppDelegate.m */,
+				1CE2CAFC157E19E6006F836C /* SQView.h */,
+				1CE2CAFD157E19E6006F836C /* SQView.m */,
+				1CE2CAE9157E168D006F836C /* SQViewController.h */,
+				1CE2CAEA157E168D006F836C /* SQViewController.m */,
+				1CE2CADE157E168D006F836C /* Supporting Files */,
+			);
+			path = SQLayoutExample;
+			sourceTree = "<group>";
+		};
+		1CE2CADE157E168D006F836C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CE2CADF157E168D006F836C /* SQLayoutExample-Info.plist */,
+				1CE2CAE0157E168D006F836C /* InfoPlist.strings */,
+				1CE2CAE3157E168D006F836C /* main.m */,
+				1CE2CAE5157E168D006F836C /* SQLayoutExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CE2CAFF157E1F89006F836C /* SQLayout */ = {
+			isa = PBXGroup;
+			children = (
+				1CE2CB00157E1F89006F836C /* SQLayout.h */,
+				1CE2CB01157E1F89006F836C /* SQLayout.m */,
+			);
+			name = SQLayout;
+			path = ../../SQLayout;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CE2CAD2157E168D006F836C /* SQLayoutExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CE2CAF4157E168D006F836C /* Build configuration list for PBXNativeTarget "SQLayoutExample" */;
+			buildPhases = (
+				1CE2CACF157E168D006F836C /* Sources */,
+				1CE2CAD0157E168D006F836C /* Frameworks */,
+				1CE2CAD1157E168D006F836C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQLayoutExample;
+			productName = SQLayoutExample;
+			productReference = 1CE2CAD3157E168D006F836C /* SQLayoutExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CE2CACA157E168D006F836C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SQ;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1CE2CACD157E168D006F836C /* Build configuration list for PBXProject "SQLayoutExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1CE2CAC8157E168D006F836C;
+			productRefGroup = 1CE2CAD4157E168D006F836C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CE2CAD2157E168D006F836C /* SQLayoutExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CE2CAD1157E168D006F836C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE2CAE2157E168D006F836C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CE2CACF157E168D006F836C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE2CAE4157E168D006F836C /* main.m in Sources */,
+				1CE2CAE8157E168D006F836C /* SQAppDelegate.m in Sources */,
+				1CE2CAEB157E168D006F836C /* SQViewController.m in Sources */,
+				1CE2CAFE157E19E6006F836C /* SQView.m in Sources */,
+				1CE2CB02157E1F89006F836C /* SQLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1CE2CAE0157E168D006F836C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CE2CAE1157E168D006F836C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CE2CAF2157E168D006F836C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1CE2CAF3157E168D006F836C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CE2CAF5157E168D006F836C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SQLayoutExample/SQLayoutExample-Prefix.pch";
+				INFOPLIST_FILE = "SQLayoutExample/SQLayoutExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1CE2CAF6157E168D006F836C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SQLayoutExample/SQLayoutExample-Prefix.pch";
+				INFOPLIST_FILE = "SQLayoutExample/SQLayoutExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CE2CACD157E168D006F836C /* Build configuration list for PBXProject "SQLayoutExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CE2CAF2157E168D006F836C /* Debug */,
+				1CE2CAF3157E168D006F836C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CE2CAF4157E168D006F836C /* Build configuration list for PBXNativeTarget "SQLayoutExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CE2CAF5157E168D006F836C /* Debug */,
+				1CE2CAF6157E168D006F836C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CE2CACA157E168D006F836C /* Project object */;
+}
