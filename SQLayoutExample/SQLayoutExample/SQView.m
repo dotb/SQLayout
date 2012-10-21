@@ -55,14 +55,14 @@
     padding.right = 10;
     padding.left = 30;
     
-    [SQLayout layoutView:&labelOne relativeToView:self
+    [SQLayout layoutView:labelOne relativeToView:self
                placement:SQPlaceWithin 
                alignment:SQAlignVCenter | SQAlignHCenter
                withWidth:self.bounds.size.width
               withHeight:self.bounds.size.height 
              withPadding:SQPaddingZero];
     
-    [SQLayout layoutView:&labelTwo relativeToView:labelOne
+    [SQLayout layoutView:labelTwo relativeToView:labelOne
                placement:SQPlaceBelow
                alignment:SQAlignHCenter
                withWidth:self.bounds.size.width
