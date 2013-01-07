@@ -30,6 +30,7 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#import <CoreGraphics/CoreGraphics.h>
 
 enum {
     SQAlignHCenter = 1, 
