@@ -75,6 +75,8 @@ const SQPadding SQPaddingZero = {
            withPadding:(SQPadding) padding
 
 {
+    [SQStyleManager styleView:view];
+
     CGRect viewFrame = [view frame];
     
     /* If the view is not placed within a superview, attempt to add

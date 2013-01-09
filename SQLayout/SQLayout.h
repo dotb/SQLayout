@@ -31,6 +31,7 @@
  */
 
 #import <CoreGraphics/CoreGraphics.h>
+#import "SQStyleManager.h"
 
 enum {
     SQAlignHCenter = 1, 
