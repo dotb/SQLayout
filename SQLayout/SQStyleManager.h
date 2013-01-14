@@ -32,6 +32,10 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol SQStyleListProtocol <NSObject>
+- (void)styleObject:(NSObject *) object forClass:(Class) class;
+@end
+
 @interface SQStyleManager : NSObject
 + (void)styleView:(UIView *) view;
 @end

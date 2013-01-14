@@ -35,12 +35,11 @@
 @implementation SQStyleManager
 
 + (void)styleView:(UIView *) view
-{
-    if ([view isKindOfClass:[UILabel class]])
+{  
+    id<SQStyleListProtocol> styleList = [[NSClassFromString(@"SQStyleList") alloc] init];
+    if (styleList)
     {
-        UILabel *label = (UILabel *)view;
-        [label setNumberOfLines:0];
-        [label setBackgroundColor:[UIColor clearColor]];
+        [styleList styleObject:view forClass:[view class]];
     }
 }
 
