@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView ()
-
+@property (nonatomic, strong) NSString *styleClassIdentifier;
 @end
