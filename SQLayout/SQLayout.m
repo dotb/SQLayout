@@ -58,24 +58,78 @@ const SQPadding SQPaddingZero = {
     .right = 0.
 };
 
+#pragma mark - Public Methods
+// Without style
 + (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
              placement:(SQPlace) placement alignment:(SQAlign) alignment
               withSize:(CGSize) size
            withPadding:(SQPadding) padding
 {
     return [SQLayout layoutView:view relativeToView:relativeView
-               placement:placement alignment:alignment
-               withWidth:size.width withHeight:size.height
-             withPadding:padding];
+                      placement:placement alignment:alignment
+                      withWidth:size.width withHeight:size.height
+                    withPadding:padding withStyleClasses:nil];
 }
 
 + (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
              placement:(SQPlace) placement alignment:(SQAlign) alignment
              withWidth:(CGFloat) width withHeight:(CGFloat) height
            withPadding:(SQPadding) padding
+{
+    return [SQLayout layoutView:view relativeToView:relativeView
+                      placement:placement alignment:alignment
+                      withWidth:width withHeight:height
+                    withPadding:padding withStyleClasses:nil];
+}
+
+// Size with one style class
++ (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
+             placement:(SQPlace) placement alignment:(SQAlign) alignment
+              withSize:(CGSize) size
+           withPadding:(SQPadding) padding
+      withStyleClass:(NSString *) styleClass
+{
+    return [SQLayout layoutView:view relativeToView:relativeView
+                      placement:placement alignment:alignment
+                      withWidth:size.width withHeight:size.height
+                    withPadding:padding withStyleClasses:@[styleClass]];
+}
+
+// Width & Height with one style class
++ (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
+             placement:(SQPlace) placement alignment:(SQAlign) alignment
+             withWidth:(CGFloat) width withHeight:(CGFloat) height
+           withPadding:(SQPadding) padding
+      withStyleClass:(NSString *) styleClass
+{
+    return [SQLayout layoutView:view relativeToView:relativeView
+                      placement:placement alignment:alignment
+                      withWidth:width withHeight:height
+                    withPadding:padding withStyleClasses:@[styleClass]];
+}
+
+// Size with many style classes
++ (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
+             placement:(SQPlace) placement alignment:(SQAlign) alignment
+              withSize:(CGSize) size
+           withPadding:(SQPadding) padding
+      withStyleClasses:(NSArray *) styleClasses
+{
+    return [SQLayout layoutView:view relativeToView:relativeView
+               placement:placement alignment:alignment
+               withWidth:size.width withHeight:size.height
+             withPadding:padding withStyleClasses:styleClasses];
+}
+
+// Width & Height with many style classes
++ (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
+             placement:(SQPlace) placement alignment:(SQAlign) alignment
+             withWidth:(CGFloat) width withHeight:(CGFloat) height
+           withPadding:(SQPadding) padding
+      withStyleClasses:(NSArray *) styleClasses
 
 {
-    [SQStyleManager styleView:view];
+    [SQStyleManager styleView:view styleClasses:styleClasses];
 
     CGRect viewFrame = [view frame];
     

@@ -110,6 +110,8 @@ CG_EXTERN const SQPadding SQPaddingZero;
  * configuration and types of the given Views. This method allows
  * the size to be controlled by the user.
  */
+#pragma mark - Public Methods
+// Without style
 + (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
              placement:(SQPlace) placement alignment:(SQAlign) alignment
               withSize:(CGSize) size
@@ -119,5 +121,32 @@ CG_EXTERN const SQPadding SQPaddingZero;
              placement:(SQPlace) placement alignment:(SQAlign) alignment
              withWidth:(CGFloat) width withHeight:(CGFloat) height
            withPadding:(SQPadding) padding;
+
+// Size with one style class
++ (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
+             placement:(SQPlace) placement alignment:(SQAlign) alignment
+              withSize:(CGSize) size
+           withPadding:(SQPadding) padding
+        withStyleClass:(NSString *) styleClass;
+
+// Width & Height with one style class
++ (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
+             placement:(SQPlace) placement alignment:(SQAlign) alignment
+             withWidth:(CGFloat) width withHeight:(CGFloat) height
+           withPadding:(SQPadding) padding
+        withStyleClass:(NSString *) styleClass;
+// Size with many style classes
++ (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
+             placement:(SQPlace) placement alignment:(SQAlign) alignment
+              withSize:(CGSize) size
+           withPadding:(SQPadding) padding
+      withStyleClasses:(NSArray *) styleClasses;
+
+// Width & Height with many style classes
++ (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
+             placement:(SQPlace) placement alignment:(SQAlign) alignment
+             withWidth:(CGFloat) width withHeight:(CGFloat) height
+           withPadding:(SQPadding) padding
+      withStyleClasses:(NSArray *) styleClasses;
 
 @end

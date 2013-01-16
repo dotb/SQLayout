@@ -34,12 +34,22 @@
 
 @implementation SQStyleManager
 
-+ (void)styleView:(UIView *) view
++ (void)styleView:(UIView *) view styleClasses:(NSArray *) styleClasses
 {  
     id<SQStyleListProtocol> styleList = [[NSClassFromString(@"SQStyleList") alloc] init];
     if (styleList)
     {
-        [styleList styleObject:view forClass:[view class]];
+        // First apply object class style
+        [styleList styleObject:view forObjectClass:[view class]];
+        
+        if (styleClasses)
+        {
+            // Then apply style classes in order
+            for (NSString *styleClass in styleClasses)
+            {
+                [styleList styleObject:view forStyleClass:styleClass];
+            }
+        }
     }
 }
 
