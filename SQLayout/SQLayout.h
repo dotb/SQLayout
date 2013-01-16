@@ -111,6 +111,11 @@ CG_EXTERN const SQPadding SQPaddingZero;
  * the size to be controlled by the user.
  */
 #pragma mark - Public Methods
++ (UILabel *)createLabel;
++ (UIButton *)createButton;
++ (UIImageView *)createImageView;
++ (UITextField *)createTextField;
+
 // Without style
 + (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
              placement:(SQPlace) placement alignment:(SQAlign) alignment

@@ -59,6 +59,27 @@ const SQPadding SQPaddingZero = {
 };
 
 #pragma mark - Public Methods
+// Factory methods
++ (UILabel *)createLabel
+{
+    return [[UILabel alloc] initWithFrame:CGRectZero];
+}
+
++ (UIButton *)createButton
+{
+    return [UIButton buttonWithType:UIButtonTypeCustom];
+}
+
++ (UIImageView *)createImageView
+{
+    return [[UIImageView alloc] initWithFrame:CGRectZero];
+}
+
++ (UITextField *)createTextField
+{
+    return [[UITextField alloc] initWithFrame:CGRectZero];
+}
+
 // Without style
 + (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
              placement:(SQPlace) placement alignment:(SQAlign) alignment
