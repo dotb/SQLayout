@@ -115,6 +115,8 @@ CG_EXTERN const SQPadding SQPaddingZero;
 + (UIButton *)createButton;
 + (UIImageView *)createImageView;
 + (UITextField *)createTextField;
++ (UITableView *)createTableView;
++ (UIView *)createView;
 
 // Without style
 + (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView

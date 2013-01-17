@@ -80,6 +80,16 @@ const SQPadding SQPaddingZero = {
     return [[UITextField alloc] initWithFrame:CGRectZero];
 }
 
++ (UITableView *)createTableView
+{
+    return [[UITableView alloc] initWithFrame:CGRectZero];
+}
+
++ (UIView *)createView
+{
+    return [[UIView alloc] initWithFrame:CGRectZero];
+}
+
 // Without style
 + (UIView*) layoutView:(UIView *) view relativeToView:(UIView*) relativeView
              placement:(SQPlace) placement alignment:(SQAlign) alignment
