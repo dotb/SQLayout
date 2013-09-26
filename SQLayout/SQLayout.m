@@ -125,10 +125,10 @@ const SQPadding SQPaddingZero = {
     
     // Round off the coordinate and size to ensure pixel perfect rendering
     viewFrame = [view frame];
-    viewFrame.origin.x = (int) viewFrame.origin.x;
-    viewFrame.origin.y = (int) viewFrame.origin.y;
-    viewFrame.size.width = (int) viewFrame.size.width;
-    viewFrame.size.height = (int) viewFrame.size.height;
+    viewFrame.origin.x = roundf(viewFrame.origin.x);
+    viewFrame.origin.y = roundf(viewFrame.origin.y);
+    viewFrame.size.width = ceilf(viewFrame.size.width);
+    viewFrame.size.height = ceilf(viewFrame.size.height);
     [view setFrame:viewFrame];
     
     return view;
