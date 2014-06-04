@@ -34,16 +34,16 @@
 
 @interface SQLayout ()
 // Layout a child view within a parent
-+ (UIView*) layoutView:(UIView *) view withinParentView:(UIView*) parentView 
-             alignment:(SQAlign) alignment 
-             withWidth:(CGFloat) width withHeight:(CGFloat) height
-           withPadding:(SQPadding) padding;
++ (CGRect) layoutRect:(CGRect) frame withinParentView:(UIView*) parentView
+            alignment:(SQAlign) alignment
+            withWidth:(CGFloat) width withHeight:(CGFloat) height
+          withPadding:(SQPadding) padding;
 
 // Layout a view relative to a peer
-+ (UIView*) layoutView:(UIView *) view relativeToPeerView:(UIView*) relativeView
-             placement:(SQPlace) placement alignment:(SQAlign) alignment
-             withWidth:(CGFloat) width withHeight:(CGFloat) height
-           withPadding:(SQPadding) padding;
++ (CGRect) layoutRect:(CGRect) frame relativeToPeerView:(UIView*) relativeView
+            placement:(SQPlace) placement alignment:(SQAlign) alignment
+            withWidth:(CGFloat) width withHeight:(CGFloat) height
+          withPadding:(SQPadding) padding;
 
 
 + (void)resizeUILabel:(UILabel *) label constrainedToTotalSize:(CGSize) size;
@@ -104,31 +104,30 @@ const SQPadding SQPaddingZero = {
         viewFrame.size.height = height;
     }
     
-    // Update the view with the correct size
-    [view setFrame:viewFrame];
-    
     // Is the view a child of the relative View ?
     if ([view superview] == relativeView)
     {
-        [self layoutView:view withinParentView:relativeView alignment:alignment 
-               withWidth:viewFrame.size.width withHeight:viewFrame.size.height 
+        viewFrame = [self layoutRect:viewFrame withinParentView:relativeView
+               alignment:alignment
+               withWidth:viewFrame.size.width withHeight:viewFrame.size.height
              withPadding:padding];
     }
     else
     {
         // Assume the view is a peer of the relative view
-        [self layoutView:view relativeToPeerView:relativeView 
+        viewFrame = [self layoutRect:viewFrame relativeToPeerView:relativeView
                placement:placement alignment:alignment 
                withWidth:viewFrame.size.width withHeight:viewFrame.size.height
              withPadding:padding];
     }
     
     // Round off the coordinate and size to ensure pixel perfect rendering
-    viewFrame = [view frame];
     viewFrame.origin.x = roundf(viewFrame.origin.x);
     viewFrame.origin.y = roundf(viewFrame.origin.y);
     viewFrame.size.width = ceilf(viewFrame.size.width);
     viewFrame.size.height = ceilf(viewFrame.size.height);
+    
+    // Finally, update the view with new new frame.
     [view setFrame:viewFrame];
     
     return view;
@@ -137,13 +136,11 @@ const SQPadding SQPaddingZero = {
 
 
 // Layout a child view within a parent
-+ (UIView*) layoutView:(UIView*) view withinParentView:(UIView*) parentView 
++ (CGRect) layoutRect:(CGRect) frame withinParentView:(UIView*) parentView
              alignment:(SQAlign) alignment 
              withWidth:(CGFloat) width withHeight:(CGFloat) height
            withPadding:(SQPadding) padding
 {
-    CGRect frame = [view frame];
-    
     // Alignment
     if (alignment & SQAlignLeft)
         frame.origin.x = padding.left;
@@ -181,18 +178,15 @@ const SQPadding SQPaddingZero = {
     if (alignment & SQAlignExactBottom)
         frame.origin.y = parentView.bounds.size.height - height;
     
-    [view setFrame:frame];
-    return view;
+    return frame;
 }
 
 // Layout a view relative to a peer
-+ (UIView*) layoutView:(UIView *) view relativeToPeerView:(UIView*) relativeView
++ (CGRect) layoutRect:(CGRect) frame relativeToPeerView:(UIView*) relativeView
              placement:(SQPlace) placement alignment:(SQAlign) alignment
              withWidth:(CGFloat) width withHeight:(CGFloat) height
            withPadding:(SQPadding) padding;
 {
-    CGRect frame = [view frame];
-    
     // Placement
     if (placement & SQPlaceOnLeft)
         frame.origin.x = relativeView.frame.origin.x - width - padding.right;
@@ -243,16 +237,14 @@ const SQPadding SQPaddingZero = {
     if (alignment & SQAlignExactBottom)
         frame.origin.y = relativeView.frame.origin.y + relativeView.frame.size.height - height;
 
-    [view setFrame:frame];
-    return view;
+    return frame;
 }
 
 
 + (void)resizeUILabel:(UILabel *) label constrainedToTotalSize:(CGSize) size
 {
     CGRect labelFrame = [label frame];
-    CGSize labelTextSize = [[label text] sizeWithFont:[label font] constrainedToSize:size lineBreakMode:[label lineBreakMode]];
-    
+    CGSize labelTextSize = [label sizeThatFits:size];
     [label setFrame:CGRectMake(labelFrame.origin.x, labelFrame.origin.y, labelTextSize.width, labelTextSize.height)];
 }
 
