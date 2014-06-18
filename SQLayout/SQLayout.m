@@ -243,8 +243,13 @@ const SQPadding SQPaddingZero = {
 
 + (void)resizeUILabel:(UILabel *) label constrainedToTotalSize:(CGSize) size
 {
+    //get the current frame
     CGRect labelFrame = [label frame];
+    
+    //constrain it to the size specified, or smaller if possible
     CGSize labelTextSize = [label sizeThatFits:size];
+    labelTextSize.width = labelTextSize.width > size.width ? size.width : labelTextSize.width;
+    labelTextSize.height = labelTextSize.height > size.height ? size.height : labelTextSize.height;
     [label setFrame:CGRectMake(labelFrame.origin.x, labelFrame.origin.y, labelTextSize.width, labelTextSize.height)];
 }
 
