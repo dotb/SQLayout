@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.authors      = 'Bradley Clayton', 'Hadi Michael'
   s.social_media_url   = "http://twitter.com/dotb"
 
-  s.license      = { :type => 'New-BSD', :text => license }
+  s.license      = { :type => 'New-BSD', :text => license, :file => 'LICENSE' }
 
   s.source       = { :git => 'https://github.com/dotb/SQLayout.git', :tag => "v#{s.version}" }
   s.source_files = 'SQLayout/SQLayout.{h,m}'
