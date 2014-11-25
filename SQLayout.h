@@ -83,15 +83,13 @@ enum {
 };
 typedef uint SQLAYOUT;
 
-@interface SQLayout : NSObject
-
-typedef struct SQPadding SQPadding;
 struct SQPadding {
     CGFloat left;
     CGFloat right;
     CGFloat top;
     CGFloat bottom;
 };
+typedef struct SQPadding SQPadding;
 
 CG_INLINE SQPadding
 SQPaddingMake(CGFloat top, CGFloat bottom, CGFloat left, CGFloat right)
@@ -103,6 +101,8 @@ SQPaddingMake(CGFloat top, CGFloat bottom, CGFloat left, CGFloat right)
 }
 
 CG_EXTERN const SQPadding SQPaddingZero;
+
+@interface SQLayout : NSObject
 
 /*
  * A dynamic method which works out a users intentions based on the
