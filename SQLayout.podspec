@@ -10,7 +10,7 @@ EOF
 
 Pod::Spec.new do |s|
   s.name         = 'SQLayout'
-  s.version      = '1.1.1'
+  s.version      = '1.2.0'
   s.summary      = 'Simple layout tool for UIViews that need to be placed relative to one another.'
 
   s.homepage     = 'https://github.com/dotb/SQLayout'
