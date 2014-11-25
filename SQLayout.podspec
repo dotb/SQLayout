@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.license      = { :type => 'New-BSD', :text => license, :file => 'LICENSE' }
 
-  s.source       = { :git => 'https://github.com/dotb/SQLayout.git', :tag => "v#{s.version}" }
+  s.source       = { :git => 'https://github.com/dotb/SQLayout.git', :tag => s.version.to_s }
   s.source_files = 'SQLayout/SQLayout.{h,m}'
 
   s.requires_arc = true
