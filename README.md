@@ -42,19 +42,19 @@ Layout is performed through alignment and placement directives.
 **Laying out a view relative to another view**
 
 Consider two UIImageViews: imageView1 and imageView2. If you wanted to place imageView2 to the right of imageView1, and align the top of imageView2 exactly in line with the top of imageView1, with a padding space of 20 pixels between the views:
-
-    [SQLayout layoutView:&imageView2 relativeToView:imageView1 
-        placement:SQPlaceRight alignment:SQAlignExactTop 
-        withWidth:imageView2.width withHeight:imageView2.height 
+    
+    [SQLayout layoutView:imageView2 relativeToView:imageView1
+        placement:SQPlaceOnRight alignment:SQAlignExactTop
+        withWidth:imageView2.frame.size.width withHeight:imageView2.frame.size.height
         withPadding:SQPaddingMake(20, 20, 20, 20)];
 
 **Laying out a child within a parent**
 
 Consider a parent UIView and child UIView. If you wanted to place the child at the top centre of the parent, with a size of 100x100 pixels, and 20 pixels of padding between the top of the parent and the top of the child, you could use the following:
 
-    [SQLayout layoutView:&child relativeToView:parent 
-        placement:SQPlaceWithin alignment:SQAlignTop | SQAlignHCenter 
-        withWidth:100 withHeight:100 
+    [SQLayout layoutView:child relativeToView:parent
+        placement:SQPlaceWithin alignment:SQAlignTop | SQAlignHCenter
+        withWidth:100 withHeight:100
         withPadding:SQPaddingMake(20, 20, 20, 20)];
 
 **Laying out UILabels**
@@ -65,16 +65,12 @@ UILabels are treated slightly differently to standard UIView objects, because th
 - the line wrapping mode,
 - the final font to be used.
 
-The following example will lay out a UILabel with 20px of padding on its top and left, with the best size to fit within a space of 100x800px
+The following example will lay out a UILabel with 20px of padding on its top and left, with the best size to fit within a space of 100x800px:
 
-    [SQLayout layoutView:&label relativeToView:parent 
-        placement:SQPlaceNone alignment:SQAlignTop | SQAlignLeft 
-        withWidth:100 withHeight:800 
+    [SQLayout layoutView:LABEL relativeToView:parent
+        placement:SQPlaceNone alignment:SQAlignTop | SQAlignLeft
+        withWidth:100 withHeight:100
         withPadding:SQPaddingMake(20, 20, 20, 20)];
-
-#TODO
-
-- Update Example
 
 #LICENSE (New-BSD)
 Copyright (c) 2014, Bradley Clayton (http://squarepolka.com). All rights reserved.
