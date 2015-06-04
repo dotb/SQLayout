@@ -162,8 +162,14 @@ const SQPadding SQPaddingZero = {
     if (alignment & SQAlignExactHCenter)
         frame.origin.x = (parentView.bounds.size.width / 2 - width / 2);
     
-    if (alignment & SQAlignExactVCenter)
-        frame.origin.y = (parentView.bounds.size.height / 2 - height / 2);
+    if (alignment & SQAlignCenter)
+    {
+        frame.origin.x = (parentView.bounds.size.width / 2 - width / 2) + padding.left - padding.right;
+        frame.origin.y = (parentView.bounds.size.height / 2 - height / 2) + padding.top - padding.bottom;
+    }
+    
+    if (alignment & SQAlignVCenter)
+        frame.origin.y = (parentView.bounds.size.height / 2 - height / 2) + padding.top - padding.bottom;
     
     if (alignment & SQAlignTop)
         frame.origin.y = padding.top;

@@ -1,5 +1,5 @@
 #SQLayout
-SQLayout is an iOS library that provides simple layout tools for UIViews that need to be placed relative to one another.
+SQLayout is an iOS library that provides simple layout tools for UIViews that need to be placed relative to one another. SQLayout works with Swift and Objective-C.
 
 ##SQLayout directives
 Layout is performed through alignment and placement directives.

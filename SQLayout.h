@@ -32,7 +32,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
 
-enum {
+typedef NS_OPTIONS(NSUInteger, SQAlign) {
     SQAlignHCenter = 1, 
     SQAlignLeft = 1 << 2,
     SQAlignRight = 1 << 3,
@@ -47,41 +47,24 @@ enum {
     SQAlignExactTop = 1 << 11,
     SQAlignExactBottom = 1 << 12,
     SQAlignNone = 1 << 13,
+    SQAlignCenter = 1 << 14,
 };
-typedef uint SQAlign;
 
-enum {
+typedef NS_OPTIONS(NSUInteger, SQPlace) {
     SQPlaceOnLeft = 1,
     SQPlaceOnRight = 1 << 1,
     SQPlaceAbove = 1 << 2,
     SQPlaceBelow = 1 << 3,
     SQPlaceNone = 1 << 4,
-    SQPlaceWithin = 1 << 4,    
+    SQPlaceWithin = 1 << 4,
 };
-typedef uint SQPlace;
 
-enum {
+typedef NS_OPTIONS(NSUInteger, SQSize) {
     SQSizeUseAllWidth = 1,
     SQSizeUseAllHeight = 1 << 1,
     SQSizeUseAvailableWidth = 1 << 2,
     SQSizeUseAvailableHeight = 1 << 3,
 };
-typedef uint SQSize;
-
-enum {
-    SQLAYOUT_HORIZONTAL_LEFT_OF = 1,
-    SQLAYOUT_HORIZONTAL_RIGHT_OF = 2,
-    SQLAYOUT_HORIZONTAL_CENTER = 3,
-    SQLAYOUT_VERTICAL_ABOVE = 4,
-    SQLAYOUT_VERTICAL_BELOW = 5,
-    SQLAYOUT_VERTICAL_CENTER = 6,
-    
-    SQLAYOUT_HORIZONTAL_LEFT_ALIGN = 7,
-    SQLAYOUT_HORIZONTAL_RIGHT_ALIGN = 8,
-    SQLAYOUT_VERTICAL_TOP_ALIGN = 9,
-    SQLAYOUT_VERTICAL_BOTTOM_ALIGN = 10
-};
-typedef uint SQLAYOUT;
 
 struct SQPadding {
     CGFloat left;
