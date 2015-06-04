@@ -41,8 +41,14 @@ Layout is performed through alignment and placement directives.
 
 **Laying out a view relative to another view**
 
-Consider two UIImageViews: imageView1 and imageView2. If you wanted to place imageView2 to the right of imageView1, and align the top of imageView2 exactly in line with the top of imageView1, with a padding space of 20 pixels between the views:
+Consider two UIImageViews: imageView1 and imageView2. If you wanted to place imageView2 to the right of imageView1, and align the top of imageView2 exactly in line with the top of imageView1, with a padding space of 20 pixels between the views.
     
+Swift:
+
+    SQLayout.layoutView(imageView2, relativeToView:imageView1, placement:SQPlace.OnRight, alignment: SQAlign.ExactTop, withWidth:imageView2.frame.size.width withHeight:imageView2.frame.size.height, withPadding:SQPaddingMake(20, 20, 20, 20))
+    
+Objective-C:
+
     [SQLayout layoutView:imageView2 relativeToView:imageView1
         placement:SQPlaceOnRight alignment:SQAlignExactTop
         withWidth:imageView2.frame.size.width withHeight:imageView2.frame.size.height
@@ -71,7 +77,7 @@ UILabels are treated slightly differently to standard UIView objects, because th
 - the line wrapping mode,
 - the final font to be used.
 
-The following example will lay out a UILabel with 20px of padding on its top and left, with the best size to fit within a space of 100x800px:
+The following example will lay out a UILabel with 20px of padding on its top and left, with the best size to fit within a space of 100x800px.
 
 Swift:
 
