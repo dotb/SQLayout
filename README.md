@@ -50,7 +50,13 @@ Consider two UIImageViews: imageView1 and imageView2. If you wanted to place ima
 
 **Laying out a child within a parent**
 
-Consider a parent UIView and child UIView. If you wanted to place the child at the top centre of the parent, with a size of 100x100 pixels, and 20 pixels of padding between the top of the parent and the top of the child, you could use the following:
+Consider a parent UIView and child UIView. If you wanted to place the child at the top centre of the parent, with a size of 100x100 pixels, and 20 pixels of padding between the top of the parent and the top of the child, you could use the following.
+
+Swift:
+
+    SQLayout.layoutView(child, relativeToView:parent, placement:SQPlace.Within, alignment: SQAlign.Top | SQAlign.HCenter, withWidth:100 withHeight:100, withPadding:SQPaddingMake(20, 20, 20, 20))
+
+Objective-C:
 
     [SQLayout layoutView:child relativeToView:parent
         placement:SQPlaceWithin alignment:SQAlignTop | SQAlignHCenter
@@ -66,6 +72,12 @@ UILabels are treated slightly differently to standard UIView objects, because th
 - the final font to be used.
 
 The following example will lay out a UILabel with 20px of padding on its top and left, with the best size to fit within a space of 100x800px:
+
+Swift:
+
+    SQLayout.layoutView(LABEL, relativeToView:parent, placement:SQPlace.None, alignment: SQAlign.Top | SQAlign.Left, withWidth:100 withHeight:100, withPadding:SQPaddingMake(20, 20, 20, 20))
+
+Objective-C
 
     [SQLayout layoutView:LABEL relativeToView:parent
         placement:SQPlaceNone alignment:SQAlignTop | SQAlignLeft
