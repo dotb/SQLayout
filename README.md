@@ -81,7 +81,7 @@ The following example will lay out a UILabel with 20px of padding on its top and
 
 Swift:
 
-    SQLayout.layoutView(LABEL, relativeToView:parent, placement:SQPlace.None, alignment: SQAlign.Top | SQAlign.Left, withWidth:100 withHeight:100, withPadding:SQPaddingMake(20, 20, 20, 20))
+    SQLayout.layoutView(LABEL, relativeToView:parent, placement:SQPlace.None, alignment: SQAlign.Top | SQAlign.Left, withWidth:100, withHeight:100, withPadding:SQPaddingMake(20, 20, 20, 20))
 
 Objective-C
 
