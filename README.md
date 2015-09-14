@@ -58,9 +58,9 @@ Objective-C:
 
 Consider a parent UIView and child UIView. If you wanted to place the child at the top centre of the parent, with a size of 100x100 pixels, and 20 pixels of padding between the top of the parent and the top of the child, you could use the following.
 
-Swift:
+Swift 2:
 
-    SQLayout.layoutView(child, relativeToView:parent, placement:SQPlace.Within, alignment: SQAlign.Top | SQAlign.HCenter, withWidth:100 withHeight:100, withPadding:SQPaddingMake(20, 20, 20, 20))
+    SQLayout.layoutView(child, relativeToView:parent, placement:SQPlace.Within, alignment: [SQAlign.Top, SQAlign.HCenter], withWidth:100 withHeight:100, withPadding:SQPaddingMake(20, 20, 20, 20))
 
 Objective-C:
 
@@ -79,9 +79,9 @@ UILabels are treated slightly differently to standard UIView objects, because th
 
 The following example will lay out a UILabel with 20px of padding on its top and left, with the best size to fit within a space of 100x800px.
 
-Swift:
+Swift 2:
 
-    SQLayout.layoutView(LABEL, relativeToView:parent, placement:SQPlace.None, alignment: SQAlign.Top | SQAlign.Left, withWidth:100, withHeight:100, withPadding:SQPaddingMake(20, 20, 20, 20))
+    SQLayout.layoutView(LABEL, relativeToView:parent, placement:SQPlace.None, alignment: [SQAlign.Top, SQAlign.Left], withWidth:100, withHeight:100, withPadding:SQPaddingMake(20, 20, 20, 20))
 
 Objective-C
 
